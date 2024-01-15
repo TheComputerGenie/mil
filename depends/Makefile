@@ -1,6 +1,7 @@
 .NOTPARALLEL :
 
 SOURCES_PATH ?= $(BASEDIR)/sources
+WORK_PATH = $(BASEDIR)/work
 BASE_CACHE ?= $(BASEDIR)/built
 SDK_PATH ?= $(BASEDIR)/SDKs
 NO_QT ?=
@@ -167,6 +168,10 @@ check-packages: check-sources
 
 install: check-packages $(host_prefix)/share/config.site
 
+clean-all: clean
+	@rm -rf $(SOURCES_PATH) x86_64* i686* mips* arm* aarch64* powerpc* riscv32* riscv64* s390x* download-stamps *.tar.bz2 *.tar.gz
+clean:
+	@rm -rf $(WORK_PATH) $(BASE_CACHE) $(BUILD)
 
 download-one: check-sources $(all_sources)
 
