@@ -1,6 +1,6 @@
 package=libXau
 $(package)_version=1.0.8
-$(package)_download_path=http://xorg.freedesktop.org/releases/individual/lib/
+$(package)_download_path=https://src.fedoraproject.org/repo/pkgs/libXau/libXau-1.0.8.tar.bz2/685f8abbffa6d145c0f930f00703b21b/
 $(package)_file_name=$(package)-$($(package)_version).tar.bz2
 $(package)_sha256_hash=fdd477320aeb5cdd67272838722d6b7d544887dfe7de46e1e7cc0c27c2bea4f2
 $(package)_dependencies=xproto
